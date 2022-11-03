@@ -1,0 +1,45 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Thu Nov  3 21:03:14 2022
+[*]
+[dumpfile] "/home/lilo/Documents/Etch_a_sketch/spi_controller.fst"
+[dumpfile_mtime] "Thu Nov  3 21:02:40 2022"
+[dumpfile_size] 1099
+[savefile] "/home/lilo/Documents/Etch_a_sketch/config_gtkwave.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-18.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] test_spi_controller.
+[sst_width] 233
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 144
+@22
+test_spi_controller.UUT.bit_counter[4:0]
+@28
+test_spi_controller.UUT.clk
+test_spi_controller.UUT.csb
+@22
+test_spi_controller.UUT.i_data[15:0]
+@28
+test_spi_controller.UUT.i_ready
+test_spi_controller.UUT.i_valid
+test_spi_controller.UUT.miso
+test_spi_controller.UUT.mosi
+@22
+test_spi_controller.UUT.o_data[23:0]
+@28
+test_spi_controller.UUT.o_ready
+test_spi_controller.UUT.o_valid
+test_spi_controller.UUT.rst
+@22
+test_spi_controller.UUT.rx_data[23:0]
+@28
+test_spi_controller.UUT.sclk
+test_spi_controller.UUT.spi_mode[2:0]
+test_spi_controller.UUT.state[2:0]
+@22
+test_spi_controller.UUT.tx_data[15:0]
+[pattern_trace] 1
+[pattern_trace] 0

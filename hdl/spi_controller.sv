@@ -61,6 +61,7 @@ checking the current value of sclk. If it's 1, we're about to go negative,
 so that's a negative edge.
 
 */
+
 always_ff @(posedge clk) begin : spi_controller_fsm
   if(rst) begin
     state <= S_IDLE;
@@ -74,13 +75,24 @@ always_ff @(posedge clk) begin : spi_controller_fsm
   end else begin
     case(state)
       S_IDLE : begin
+        if (|i_data != 0) begin
+          case (spi_mode)
+            WRITE_8  : bit_counter <= 5'd8;
+            WRITE_16 : bit_counter <= 5'd16;
+            WRITE_8_READ_8  : bit_counter <= 5'd8;
+            WRITE_8_READ_16 : bit_counter <= 5'd8;
+            WRITE_8_READ_24 : bit_counter <= 5'd8;
+            default : bit_counter <= 0;
+          endcase
+          tx_data <= i_data;
+          state <= S_TXING;
+        end
       end
       S_TXING : begin
         sclk <= ~sclk;
         // positive edge logic
         if(~sclk) begin
         end else begin // negative edge logic
-          
           if(bit_counter != 0) begin
             bit_counter <= bit_counter - 1;
           end else begin
