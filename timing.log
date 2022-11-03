@@ -1,0 +1,156 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Thu Nov  3 17:33:35 2022
+| Host         : lilo-Latitude-5401 running 64-bit Ubuntu 20.04.5 LTS
+| Command      : report_timing -sort_by group -max_paths 100 -path_type summary -file timing.log -verbose
+| Design       : main
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+----------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Startpoint                     Endpoint                       Slack(ns)     
+----------------------------------------------------------------------------
+ILI9341/state_reg[0]/C         ILI9341/SPI0/bit_counter_reg[3]/CE
+                                                              11.552        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/bit_counter_reg[4]/CE
+                                                              11.552        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/bit_counter_reg[0]/CE
+                                                              11.706        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/bit_counter_reg[1]/CE
+                                                              11.706        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/bit_counter_reg[2]/CE
+                                                              11.706        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/FSM_onehot_state_reg[4]/CE
+                                                              11.903        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/FSM_onehot_state_reg[0]/CE
+                                                              12.128        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/FSM_onehot_state_reg[1]/CE
+                                                              12.128        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/FSM_onehot_state_reg[2]/CE
+                                                              12.128        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/tx_data_reg[11]/CE
+                                                              12.263        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[12]/R   12.320        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[13]/R   12.320        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[14]/R   12.320        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[15]/R   12.320        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[0]/R    12.330        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[1]/R    12.330        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[2]/R    12.330        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[3]/R    12.330        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[0]/R
+                                                              12.332        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[1]/R
+                                                              12.332        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[2]/R
+                                                              12.332        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[4]/R    12.421        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[5]/R    12.421        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[6]/R    12.421        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[7]/R    12.421        
+PULSE_100Hz/counter_reg[7]/C   LED_FADER1/out_reg[5]/CE       12.472        
+PULSE_100Hz/counter_reg[7]/C   LED_FADER1/out_reg[6]/CE       12.472        
+PULSE_100Hz/counter_reg[7]/C   LED_FADER1/out_reg[7]/CE       12.472        
+PULSE_100Hz/counter_reg[7]/C   LED_FADER1/out_reg[8]/CE       12.472        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[20]/R   12.480        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[21]/R   12.480        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[22]/R   12.480        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[23]/R   12.480        
+ILI9341/pixel_x_reg[3]/C       ILI9341/pixel_y_reg[4]/CE      12.481        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[10]/R   12.485        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[11]/R   12.485        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[8]/R    12.485        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[9]/R    12.485        
+ILI9341/pixel_x_reg[3]/C       ILI9341/pixel_y_reg[1]/CE      12.517        
+ILI9341/pixel_x_reg[3]/C       ILI9341/pixel_y_reg[2]/CE      12.517        
+ILI9341/pixel_x_reg[3]/C       ILI9341/pixel_y_reg[3]/CE      12.517        
+ILI9341/pixel_y_reg[2]/C       ILI9341/SPI0/tx_data_reg[11]/D 12.558        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[0]/R   12.578        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[1]/R   12.578        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[2]/R   12.578        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[3]/R   12.578        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[3]/R
+                                                              12.590        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[4]/R
+                                                              12.590        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[5]/R
+                                                              12.590        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[6]/R
+                                                              12.590        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[16]/R   12.619        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[17]/R   12.619        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[18]/R   12.619        
+PULSE_10Hz/counter_reg[10]/C   PULSE_10Hz/counter_reg[19]/R   12.619        
+PULSE_100Hz/counter_reg[7]/C   LED_FADER1/out_reg[0]/CE       12.634        
+PULSE_100Hz/counter_reg[11]/C  PULSE_100Hz/counter_reg[4]/R   12.647        
+PULSE_100Hz/counter_reg[11]/C  PULSE_100Hz/counter_reg[5]/R   12.647        
+PULSE_100Hz/counter_reg[11]/C  PULSE_100Hz/counter_reg[6]/R   12.647        
+PULSE_100Hz/counter_reg[11]/C  PULSE_100Hz/counter_reg[7]/R   12.647        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[20]/R  12.649        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/tx_data_reg[2]/CE 12.658        
+ILI9341/pixel_x_reg[3]/C       ILI9341/pixel_y_reg[0]/CE      12.660        
+ILI9341/pixel_x_reg[3]/C       ILI9341/pixel_y_reg[5]/CE      12.660        
+ILI9341/pixel_x_reg[3]/C       ILI9341/pixel_y_reg[6]/CE      12.660        
+ILI9341/pixel_x_reg[3]/C       ILI9341/pixel_y_reg[7]/CE      12.660        
+ILI9341/pixel_x_reg[3]/C       ILI9341/pixel_y_reg[8]/CE      12.660        
+PULSE_100Hz/counter_reg[7]/C   LED_FADER1/out_reg[1]/CE       12.691        
+PULSE_100Hz/counter_reg[7]/C   LED_FADER1/out_reg[2]/CE       12.691        
+PULSE_100Hz/counter_reg[7]/C   LED_FADER1/out_reg[3]/CE       12.691        
+PULSE_100Hz/counter_reg[7]/C   LED_FADER1/out_reg[4]/CE       12.691        
+LED_FADER1/out_reg[5]/C        LED_FADER1/state_reg/D         12.697        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[10]/R  12.727        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[11]/R  12.727        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[8]/R   12.727        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[9]/R   12.727        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[12]/R  12.753        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[13]/R  12.753        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[14]/R  12.753        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[15]/R  12.753        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[16]/R  12.792        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[17]/R  12.792        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[18]/R  12.792        
+PULSE_100Hz/counter_reg[7]/C   PULSE_100Hz/counter_reg[19]/R  12.792        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/tx_data_reg[0]/CE 12.809        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/tx_data_reg[5]/CE 12.809        
+ILI9341/state_reg[0]/C         ILI9341/SPI0/tx_data_reg[6]/CE 12.809        
+ILI9341/pixel_y_reg[2]/C       ILI9341/SPI0/tx_data_reg[5]/D  12.860        
+ILI9341/pixel_y_reg[2]/C       ILI9341/SPI0/tx_data_reg[0]/D  12.860        
+ILI9341/pixel_y_reg[2]/C       ILI9341/SPI0/tx_data_reg[6]/D  12.878        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[0]/CE
+                                                              12.919        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[1]/CE
+                                                              12.919        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[2]/CE
+                                                              12.919        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[3]/CE
+                                                              12.945        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[4]/CE
+                                                              12.945        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[5]/CE
+                                                              12.945        
+ILI9341/cfg_bytes_remaining_reg[1]/C
+                               ILI9341/cfg_bytes_remaining_reg[6]/CE
+                                                              12.945        
+PULSE_10Hz/counter_reg[10]/C   LED_FADER0/state_reg/D         12.980        
+PULSE_10Hz/counter_reg[10]/C   LED_FADER0/out_reg[1]/CE       13.104        
+PULSE_10Hz/counter_reg[10]/C   LED_FADER0/out_reg[2]/CE       13.104        
+PULSE_10Hz/counter_reg[10]/C   LED_FADER0/out_reg[3]/CE       13.104        
+
+
+

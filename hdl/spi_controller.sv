@@ -77,11 +77,11 @@ always_ff @(posedge clk) begin : spi_controller_fsm
       S_IDLE : begin
         if (|i_data != 0) begin
           case (spi_mode)
-            WRITE_8  : bit_counter <= 5'd8;
-            WRITE_16 : bit_counter <= 5'd16;
-            WRITE_8_READ_8  : bit_counter <= 5'd8;
-            WRITE_8_READ_16 : bit_counter <= 5'd8;
-            WRITE_8_READ_24 : bit_counter <= 5'd8;
+            WRITE_8  : bit_counter <= 5'd7;
+            WRITE_16 : bit_counter <= 5'd15;
+            WRITE_8_READ_8  : bit_counter <= 5'd7;
+            WRITE_8_READ_16 : bit_counter <= 5'd7;
+            WRITE_8_READ_24 : bit_counter <= 5'd7;
             default : bit_counter <= 0;
           endcase
           tx_data <= i_data;
