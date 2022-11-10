@@ -56,12 +56,11 @@ initial begin
     while(~i_ready) @(posedge clk);
     repeat (2) @(negedge clk);
     i_data = i + 8'b1010_1010; 
-    $display("\nWriting 0b%b to the SPI Device.", i_data[7:0]);
+    $display("\nWriting 0x%h to the SPI Device.", i_data[7:0]);
     i_valid = 1;
     for (int j = 0; j < 8; j = j + 1) begin
       @(negedge sclk);
       i_valid = 0;
-      $display("mosi 0b%b", mosi);
     end
   end
 
@@ -74,12 +73,11 @@ initial begin
     while(~i_ready) @(posedge clk);
     repeat (2) @(negedge clk);
     i_data = i + 16'b0101_0101_1010_1010; 
-    $display("\nWriting 0b%b to the SPI Device.", i_data[15:0]);
+    $display("\nWriting 0x%h to the SPI Device.", i_data[7:0]);
     i_valid = 1;
     for (int j = 0; j < 16; j = j + 1) begin
       @(negedge sclk);
       i_valid = 0;
-      $display("mosi 0b%b", mosi);
     end
   end
 

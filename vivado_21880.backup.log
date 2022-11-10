@@ -1,0 +1,550 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Nov  8 16:56:11 2022
+# Process ID: 21880
+# Current directory: /home/emma/olin-cafe-f22/labs/02_etch_a_sketch
+# Command line: vivado -mode batch -source build.tcl
+# Log file: /home/emma/olin-cafe-f22/labs/02_etch_a_sketch/vivado.log
+# Journal file: /home/emma/olin-cafe-f22/labs/02_etch_a_sketch/vivado.jou
+# Running On: emma-Latitude-5491, OS: Linux, CPU Frequency: 2600.000 MHz, CPU Physical cores: 6, Host memory: 16582 MB
+#-----------------------------------------------------------
+source build.tcl
+# read_verilog [ glob ./hdl/*.sv ]
+# read_xdc ./main.xdc
+# synth_design -top main -part xc7a35tcpg236-1
+Command: synth_design -top main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21888
+WARNING: [Synth 8-6901] identifier 'vram_rd_data_valid' is used before its declaration [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ili9341_display_controller.sv:131]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2613.812 ; gain = 0.000 ; free physical = 6134 ; free virtual = 12800
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [/Programs/Vivado/2022.1/scripts/rt/data/unisim_comp.v:63629]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 64.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 83.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 12.500000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [/Programs/Vivado/2022.1/scripts/rt/data/unisim_comp.v:63629]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7071] port 'CLKOUT1' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7071] port 'CLKOUT2' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7071] port 'CLKOUT3' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7071] port 'LOCKED' of module 'MMCME2_BASE' is unconnected for instance 'MMCME2_BASE_inst' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+WARNING: [Synth 8-7023] instance 'MMCME2_BASE_inst' of module 'MMCME2_BASE' has 18 connections declared, but only 6 given [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:61]
+INFO: [Synth 8-6157] synthesizing module 'pulse_generator' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/pulse_generator.sv:5]
+	Parameter N bound to: 27 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pulse_generator' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/pulse_generator.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'pulse_generator__parameterized0' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/pulse_generator.sv:5]
+	Parameter N bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pulse_generator__parameterized0' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/pulse_generator.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'pulse_generator__parameterized1' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/pulse_generator.sv:5]
+	Parameter N bound to: 21 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pulse_generator__parameterized1' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/pulse_generator.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'triangle_generator' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/triangle_generator.sv:3]
+	Parameter N bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'triangle_generator' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/triangle_generator.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'pwm' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/pwm.sv:5]
+	Parameter N bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pwm' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/pwm.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'ili9341_display_controller' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ili9341_display_controller.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'spi_controller' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/spi_controller.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'spi_controller' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/spi_controller.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'block_rom' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/block_rom.sv:6]
+	Parameter W bound to: 8 - type: integer 
+	Parameter L bound to: 125 - type: integer 
+	Parameter INIT bound to: 208'b0110110101100101011011010110111101110010011010010110010101110011001011110110100101101100011010010011100100110011001101000011000101011111011010010110111001101001011101000010111001101101011001010110110101101000 
+INFO: [Synth 8-251] Initializing block rom from file memories/ili9341_init.memh. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/block_rom.sv:18]
+INFO: [Synth 8-3876] $readmem data file 'memories/ili9341_init.memh' is read successfully [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/block_rom.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'block_rom' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/block_rom.sv:6]
+INFO: [Synth 8-226] default block is never used [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ili9341_display_controller.sv:196]
+INFO: [Synth 8-6155] done synthesizing module 'ili9341_display_controller' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ili9341_display_controller.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'ft6206_controller' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:7]
+	Parameter CLK_HZ bound to: 120000000 - type: integer 
+	Parameter I2C_CLK_HZ bound to: 400000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'i2c_controller' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/i2c_controller.sv:8]
+	Parameter CLK_HZ bound to: 120000000 - type: integer 
+	Parameter I2C_CLK_HZ bound to: 400000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'i2c_controller' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/i2c_controller.sv:8]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:106]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:75]
+INFO: [Synth 8-6155] done synthesizing module 'ft6206_controller' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'block_ram' [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/block_ram.sv:5]
+	Parameter W bound to: 16 - type: integer 
+	Parameter L bound to: 76800 - type: integer 
+INFO: [Synth 8-251] Initializing block rom from file zeros.memh. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/block_ram.sv:19]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'zeros.memh'; please make sure the file is added to project and has read permission, ignoring [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/block_ram.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'block_ram' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/block_ram.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'main' (0#1) [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:8]
+WARNING: [Synth 8-6014] Unused sequential element rx_data_reg was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/spi_controller.sv:72]
+WARNING: [Synth 8-3848] Net o_ready in module/entity ili9341_display_controller does not have driver. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ili9341_display_controller.sv:59]
+WARNING: [Synth 8-6014] Unused sequential element clk_divider_counter_reg was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/i2c_controller.sv:57]
+WARNING: [Synth 8-6014] Unused sequential element bit_counter_reg was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/i2c_controller.sv:59]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/i2c_controller.sv:63]
+WARNING: [Synth 8-3848] Net sda_out in module/entity i2c_controller does not have driver. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/i2c_controller.sv:34]
+WARNING: [Synth 8-3848] Net sda_oe in module/entity i2c_controller does not have driver. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/i2c_controller.sv:33]
+WARNING: [Synth 8-6014] Unused sequential element bytes_counter_reg was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:68]
+WARNING: [Synth 8-6014] Unused sequential element touch0_buffer_reg[weight] was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:70]
+WARNING: [Synth 8-6014] Unused sequential element touch0_buffer_reg[area] was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:70]
+WARNING: [Synth 8-6014] Unused sequential element touch0_buffer_reg[gesture] was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:70]
+WARNING: [Synth 8-6014] Unused sequential element touch1_buffer_reg[valid] was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:71]
+WARNING: [Synth 8-6014] Unused sequential element touch1_buffer_reg[x] was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:71]
+WARNING: [Synth 8-6014] Unused sequential element touch1_buffer_reg[y] was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:71]
+WARNING: [Synth 8-6014] Unused sequential element touch1_buffer_reg[weight] was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:71]
+WARNING: [Synth 8-6014] Unused sequential element touch1_buffer_reg[area] was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:71]
+WARNING: [Synth 8-6014] Unused sequential element touch1_buffer_reg[id] was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:71]
+WARNING: [Synth 8-6014] Unused sequential element touch1_buffer_reg[contact] was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:71]
+WARNING: [Synth 8-6014] Unused sequential element touch1_buffer_reg[gesture] was removed.  [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:71]
+WARNING: [Synth 8-3848] Net o_ready in module/entity ft6206_controller does not have driver. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/ft6206_controller.sv:32]
+WARNING: [Synth 8-3848] Net vram_wr_ena in module/entity main does not have driver. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:177]
+WARNING: [Synth 8-3848] Net vram_wr_addr in module/entity main does not have driver. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:176]
+WARNING: [Synth 8-3848] Net vram_wr_data in module/entity main does not have driver. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:178]
+WARNING: [Synth 8-3917] design main has port rgb[2] driven by constant 1
+WARNING: [Synth 8-3917] design main has port rgb[1] driven by constant 1
+WARNING: [Synth 8-3917] design main has port rgb[0] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[7] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[6] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[5] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[4] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[3] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[2] driven by constant 0
+WARNING: [Synth 8-3917] design main has port backlight driven by constant 1
+WARNING: [Synth 8-7129] Port mode in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_valid in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_addr[6] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_addr[5] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_addr[4] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_addr[3] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_addr[2] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_addr[1] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_addr[0] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[7] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[6] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[5] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[4] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[3] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[2] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[1] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[0] in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_ready in module i2c_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port miso in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_valid in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[15] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[14] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[13] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[12] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[11] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[10] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[9] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[8] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[7] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[6] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[5] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[4] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[3] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[2] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[1] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_data[0] in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_ready in module spi_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[x][11] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[x][10] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[x][9] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[x][8] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[x][1] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[x][0] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[y][11] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[y][10] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[y][9] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[y][1] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[y][0] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[weight][7] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[weight][6] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[weight][5] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[weight][4] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[weight][3] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[weight][2] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[weight][1] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[weight][0] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[area][3] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[area][2] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[area][1] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[area][0] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[id][3] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[id][2] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[id][1] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[id][0] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[contact][1] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[contact][0] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[gesture][7] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[gesture][6] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[gesture][5] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[gesture][4] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[gesture][3] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[gesture][2] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[gesture][1] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch[gesture][0] in module ili9341_display_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port touch_irq in module main is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2613.812 ; gain = 0.000 ; free physical = 7210 ; free virtual = 13895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2613.812 ; gain = 0.000 ; free physical = 7210 ; free virtual = 13895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2613.812 ; gain = 0.000 ; free physical = 7210 ; free virtual = 13895
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2613.812 ; gain = 0.000 ; free physical = 7203 ; free virtual = 13888
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/main.xdc]
+Finished Parsing XDC File [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/main.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/main.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2677.832 ; gain = 0.000 ; free physical = 7111 ; free virtual = 13810
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2677.832 ; gain = 0.000 ; free physical = 7110 ; free virtual = 13810
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7184 ; free virtual = 13874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7179 ; free virtual = 13874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7179 ; free virtual = 13874
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  iSTATE |                               01 |                              101
+                  S_IDLE |                               10 |                              000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'spi_controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7162 ; free virtual = 13866
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   22 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 5     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 9     
++---RAMs : 
+	            1200K Bit	(76800 X 16 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   8 Input   22 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 1     
+	   3 Input   21 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 1     
+	   8 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   3 Input   16 Bit        Muxes := 1     
+	   7 Input   12 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 2     
+	  11 Input   12 Bit        Muxes := 2     
+	   7 Input    9 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   3 Input    8 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	  23 Input    8 Bit        Muxes := 1     
+	  11 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	  11 Input    5 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 2     
+	   8 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 28    
+	   7 Input    1 Bit        Muxes := 11    
+	   8 Input    1 Bit        Muxes := 8     
+	   3 Input    1 Bit        Muxes := 3     
+	  11 Input    1 Bit        Muxes := 11    
+	   6 Input    1 Bit        Muxes := 4     
+	  10 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design main has port rgb[2] driven by constant 1
+WARNING: [Synth 8-3917] design main has port rgb[1] driven by constant 1
+WARNING: [Synth 8-3917] design main has port rgb[0] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[7] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[6] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[5] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[4] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[3] driven by constant 0
+WARNING: [Synth 8-3917] design main has port pmod[2] driven by constant 0
+WARNING: [Synth 8-3917] design main has port interface_mode[3] driven by constant 1
+WARNING: [Synth 8-3917] design main has port interface_mode[2] driven by constant 1
+WARNING: [Synth 8-3917] design main has port interface_mode[1] driven by constant 1
+WARNING: [Synth 8-3917] design main has port interface_mode[0] driven by constant 0
+WARNING: [Synth 8-3917] design main has port backlight driven by constant 1
+WARNING: [Synth 8-3917] design main has port display_csb driven by constant 1
+WARNING: [Synth 8-3917] design main has port spi_mosi driven by constant 0
+WARNING: [Synth 8-7129] Port touch_irq in module main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_miso in module main is either unconnected or has no load
+WARNING: [Synth 8-6014] Unused sequential element VRAM/ram_reg was removed. 
+WARNING: [Synth 8-3332] Sequential element (ILI9341/SPI0/FSM_onehot_state_reg[1]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (ILI9341/SPI0/FSM_onehot_state_reg[0]) is unused and will be removed from module main.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7144 ; free virtual = 13858
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+--------------------------+---------------+----------------+
+|Module Name | RTL Object               | Depth x Width | Implemented As | 
++------------+--------------------------+---------------+----------------+
+|main        | ILI9341/rom_addr_reg_rep | 128x8         | Block RAM      | 
++------------+--------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7033 ; free virtual = 13744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7020 ; free virtual = 13737
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7020 ; free virtual = 13737
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4649] Removing BlackBox instance PULSE_1Hz of module pulse_generator having unconnected or no output ports
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin i_0:a to constant 0
+WARNING: [Synth 8-3295] tying undriven pin i_0:en to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7028 ; free virtual = 13739
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7028 ; free virtual = 13739
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7028 ; free virtual = 13739
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7028 ; free virtual = 13739
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7023 ; free virtual = 13739
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7023 ; free virtual = 13739
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------+----------+
+|      |BlackBox name      |Instances |
++------+-------------------+----------+
+|1     |pulse_generator    |         2|
+|2     |triangle_generator |         2|
+|3     |pwm                |         2|
++------+-------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |pulse_generator__parameterized0 |     1|
+|2     |pulse_generator__parameterized1 |     1|
+|3     |pwm                             |     2|
+|5     |triangle_generator              |     2|
+|7     |BUFG                            |     1|
+|8     |CARRY4                          |     6|
+|9     |LUT1                            |    23|
+|10    |LUT2                            |     8|
+|11    |LUT3                            |    22|
+|12    |LUT4                            |    27|
+|13    |LUT5                            |    17|
+|14    |LUT6                            |    45|
+|15    |MMCME2_BASE                     |     1|
+|16    |RAMB18E1                        |     1|
+|17    |FDRE                            |    65|
+|18    |FDSE                            |     1|
+|19    |IBUF                            |     3|
+|20    |OBUF                            |    24|
++------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7023 ; free virtual = 13739
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2677.832 ; gain = 0.000 ; free physical = 7069 ; free virtual = 13789
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2677.832 ; gain = 64.020 ; free physical = 7069 ; free virtual = 13789
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2677.832 ; gain = 0.000 ; free physical = 7066 ; free virtual = 13786
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/main.xdc]
+Finished Parsing XDC File [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/main.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+CRITICAL WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'pulse_generator' instantiated as 'PULSE_100Hz'. 2 instances of this cell are unresolved black boxes. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:94]
+CRITICAL WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'pwm' instantiated as 'PWM_LED0'. 2 instances of this cell are unresolved black boxes. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:108]
+CRITICAL WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'triangle_generator' instantiated as 'LED_FADER0'. 2 instances of this cell are unresolved black boxes. [/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/hdl/main.sv:99]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2677.832 ; gain = 0.000 ; free physical = 7090 ; free virtual = 13815
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete, checksum: f09a5be2
+INFO: [Common 17-83] Releasing license: Synthesis
+53 Infos, 146 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:25 . Memory (MB): peak = 2677.832 ; gain = 64.031 ; free physical = 7297 ; free virtual = 14022
+# write_checkpoint -force synthesis.checkpoint
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2733.859 ; gain = 16.008 ; free physical = 7299 ; free virtual = 14024
+INFO: [Common 17-1381] The checkpoint '/home/emma/olin-cafe-f22/labs/02_etch_a_sketch/synthesis.checkpoint' has been generated.
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'LED_FADER0' of type 'triangle_generator' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'LED_FADER1' of type 'triangle_generator' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'PULSE_100Hz' of type 'pulse_generator' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'PULSE_10Hz' of type 'pulse_generator' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'PWM_LED0' of type 'pwm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+ERROR: [DRC INBB-3] Black Box Instances: Cell 'PWM_LED1' of type 'pwm' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.
+INFO: [Project 1-461] DRC finished with 6 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.7 . Memory (MB): peak = 2749.867 ; gain = 16.008 ; free physical = 7289 ; free virtual = 14015
+INFO: [Common 17-83] Releasing license: Implementation
+5 Infos, 0 Warnings, 0 Critical Warnings and 7 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+    while executing
+"opt_design"
+    (file "build.tcl" line 13)
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  8 16:56:44 2022...

@@ -2,17 +2,16 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Nov  3 17:33:49 2022
-# Process ID: 24217
-# Current directory: /home/lilo/Documents/Etch_a_sketch
+# Start of session at: Tue Nov  8 17:00:54 2022
+# Process ID: 50946
+# Current directory: /home/emma/olin-cafe-f22/labs/02_etch_a_sketch
 # Command line: vivado -mode batch -source program.tcl
-# Log file: /home/lilo/Documents/Etch_a_sketch/vivado.log
-# Journal file: /home/lilo/Documents/Etch_a_sketch/vivado.jou
-# Running On: lilo-Latitude-5401, OS: Linux, CPU Frequency: 4142.117 MHz, CPU Physical cores: 6, Host memory: 16561 MB
+# Log file: /home/emma/olin-cafe-f22/labs/02_etch_a_sketch/vivado.log
+# Journal file: /home/emma/olin-cafe-f22/labs/02_etch_a_sketch/vivado.jou
+# Running On: emma-Latitude-5491, OS: Linux, CPU Frequency: 2600.000 MHz, CPU Physical cores: 6, Host memory: 16582 MB
 #-----------------------------------------------------------
 source program.tcl
 # open_hw_manager
-open_hw_manager: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2613.281 ; gain = 5.961 ; free physical = 7380 ; free virtual = 13540
 # connect_hw_server
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
 INFO: [Labtools 27-2222] Launching hw_server...
@@ -47,4 +46,4 @@ INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed wi
 # close_hw_target
 INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210328B793F0A
 # close_hw_manager
-INFO: [Common 17-206] Exiting Vivado at Thu Nov  3 17:34:05 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  8 17:01:07 2022...
