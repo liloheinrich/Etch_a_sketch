@@ -183,4 +183,26 @@ block_ram #(.W(VRAM_W), .L(VRAM_L)) VRAM(
 );
 // Add your vram control FSM here:
 
+enum logic [1:0] {RESET, UPDATE, DRAW} VRAM_MODE;
+
+always_ff @(posedge clk) begin
+  case(VRAM_MODE)
+    RESET : begin
+      if (vram_clear_counter ! = 0) {
+        vram_clear_counter = vram_clear_counter - 1;
+        vram_wr_addr = vram_clear_counter;
+        vram_wr_data = 8'b0000_0000;
+      } else {
+        VRAM_MODE = RESET;
+      }
+    end
+    UPDATE : begin
+      if (buttons[0]) {
+        vram_clear_counter = VRAM_L;
+        VRAM_MODE = RESET;
+      }
+    end
+  endcase
+end
+
 endmodule
