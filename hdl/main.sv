@@ -38,7 +38,7 @@ output logic [7:0] pmod;  always_comb pmod = {6'b0, sysclk, clk}; // You can use
 // Display driver signals
 output wire [3:0] interface_mode;
 output wire touch_i2c_scl;
-inout wire touch_i2c_sda;
+inout wire touch_i2c_sda; // Lilo: what is inout? 
 input wire touch_irq;
 output wire backlight, display_rstb, data_commandb;
 output wire display_csb, spi_clk, spi_mosi;
@@ -149,7 +149,8 @@ ili9341_display_controller ILI9341(
   .vram_rd_addr(vram_rd_addr),
   .vram_rd_data(vram_rd_data),
   // !!! NOTE - change enable_test_pattern to zero once you start implementing the video ram !!!
-  .enable_test_pattern(1'b1) 
+  // .enable_test_pattern(1'b1) 
+  .enable_test_pattern(1'b0) 
 );
 
 /* ------------------------------------------------------------------------- */
@@ -183,24 +184,30 @@ block_ram #(.W(VRAM_W), .L(VRAM_L)) VRAM(
 );
 // Add your vram control FSM here:
 
-enum logic [1:0] {RESET, UPDATE, DRAW} VRAM_MODE;
+enum logic [1:0] {RESET, UPDATE} VRAM_MODE; // deleted DRAW mode
 
 always_ff @(posedge clk) begin
   case(VRAM_MODE)
     RESET : begin
-      if (vram_clear_counter ! = 0) {
-        vram_clear_counter = vram_clear_counter - 1;
+      if (vram_clear_counter != 0) begin
+        vram_wr_ena = 1'b1; 
         vram_wr_addr = vram_clear_counter;
-        vram_wr_data = 8'b0000_0000;
-      } else {
-        VRAM_MODE = RESET;
-      }
+        vram_wr_data = OLIVE; 
+        vram_clear_counter = vram_clear_counter - 1;
+      end else begin
+        vram_clear_counter = VRAM_L;
+        VRAM_MODE = UPDATE; // transition back into UPDATE mode
+      end
     end
     UPDATE : begin
-      if (buttons[0]) {
+      if (rst) begin // takes input from button[0]
         vram_clear_counter = VRAM_L;
         VRAM_MODE = RESET;
-      }
+      end else begin
+        vram_wr_addr = touch0.y * DISPLAY_WIDTH + {8'd0, touch0.x};
+        vram_wr_ena = 1'b1; 
+        vram_wr_data = WHITE;
+      end
     end
   endcase
 end

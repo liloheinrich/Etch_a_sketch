@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-| Date         : Tue Nov  8 17:00:42 2022
-| Host         : emma-Latitude-5491 running 64-bit Ubuntu 22.04.1 LTS
+| Date         : Sun Nov 13 16:46:48 2022
+| Host         : lilo-Latitude-5401 running 64-bit Ubuntu 20.04.5 LTS
 | Command      : report_timing_summary -file timing_summary.log
 | Design       : main
 | Device       : 7a35t-cpg236
@@ -136,7 +136,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     11.637        0.000                      0                  417        0.143        0.000                      0                  417        7.638        0.000                       0                   220  
+      7.489        0.000                      0                  834        0.119        0.000                      0                  834        7.638        0.000                       0                   320  
 
 
 All user specified timing constraints are met.
@@ -163,7 +163,7 @@ Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpo
 -----               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
 sys_clk_pin                                                                                                                                                      16.670        0.000                       0                     1  
   clk_feedback                                                                                                                                                   16.670        0.000                       0                     2  
-  pmod_OBUF[0]       11.637        0.000                      0                  417        0.143        0.000                      0                  417        7.638        0.000                       0                   217  
+  pmod_OBUF[0]        7.489        0.000                      0                  834        0.119        0.000                      0                  834        7.638        0.000                       0                   317  
 
 
 ------------------------------------------------------------------------------------------------
@@ -242,27 +242,27 @@ Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       83.330    
 From Clock:  pmod_OBUF[0]
   To Clock:  pmod_OBUF[0]
 
-Setup :            0  Failing Endpoints,  Worst Slack       11.637ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.143ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        7.489ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.119ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        7.638ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             11.637ns  (required time - arrival time)
-  Source:                 ILI9341/rom_addr_reg_rep/CLKARDCLK
-                            (rising edge-triggered cell RAMB18E1 clocked by pmod_OBUF[0]  {rise@0.000ns fall@8.138ns period=16.275ns})
-  Destination:            ILI9341/cfg_delay_counter_reg[16]/D
+Slack (MET) :             7.489ns  (required time - arrival time)
+  Source:                 ILI9341/pixel_y_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by pmod_OBUF[0]  {rise@0.000ns fall@8.138ns period=16.275ns})
+  Destination:            VRAM/ram_reg_1_5__0/ENBWREN
+                            (rising edge-triggered cell RAMB36E1 clocked by pmod_OBUF[0]  {rise@0.000ns fall@8.138ns period=16.275ns})
   Path Group:             pmod_OBUF[0]
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            16.275ns  (pmod_OBUF[0] rise@16.275ns - pmod_OBUF[0] rise@0.000ns)
-  Data Path Delay:        4.622ns  (logic 1.482ns (32.063%)  route 3.140ns (67.937%))
-  Logic Levels:           3  (LUT4=2 LUT6=1)
-  Clock Path Skew:        -0.011ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    5.833ns = ( 22.108 - 16.275 ) 
-    Source Clock Delay      (SCD):    6.155ns
+  Data Path Delay:        8.320ns  (logic 3.909ns (46.983%)  route 4.411ns (53.017%))
+  Logic Levels:           9  (CARRY4=6 LUT2=2 LUT3=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.814ns = ( 22.090 - 16.275 ) 
+    Source Clock Delay      (SCD):    6.113ns
     Clock Pessimism Removal (CPR):    0.311ns
   Clock Uncertainty:      0.036ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -281,19 +281,36 @@ Slack (MET) :             11.637ns  (required time - arrival time)
                                                       0.088     2.797 r  MMCME2_BASE_inst/CLKOUT0
                          net (fo=1, routed)           1.666     4.464    pmod_OBUF[0]
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.560 r  pmod_OBUF_BUFG[0]_inst/O
-                         net (fo=216, routed)         1.596     6.155    ILI9341/clk
-    RAMB18_X2Y8          RAMB18E1                                     r  ILI9341/rom_addr_reg_rep/CLKARDCLK
+                         net (fo=317, routed)         1.553     6.113    ILI9341/pmod_OBUF_BUFG[0]
+    SLICE_X48Y22         FDRE                                         r  ILI9341/pixel_y_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    RAMB18_X2Y8          RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[4])
-                                                      0.882     7.037 r  ILI9341/rom_addr_reg_rep/DOADO[4]
-                         net (fo=8, routed)           1.146     8.184    ILI9341/data[4]
-    SLICE_X58Y22         LUT4 (Prop_lut4_I0_O)        0.150     8.334 f  ILI9341/cfg_delay_counter[20]_i_3/O
-                         net (fo=3, routed)           0.692     9.025    ILI9341/cfg_delay_counter[20]_i_3_n_0
-    SLICE_X59Y22         LUT6 (Prop_lut6_I2_O)        0.326     9.351 r  ILI9341/cfg_delay_counter[20]_i_2/O
-                         net (fo=11, routed)          1.302    10.654    ILI9341/cfg_delay_counter[20]_i_2_n_0
-    SLICE_X63Y23         LUT4 (Prop_lut4_I0_O)        0.124    10.778 r  ILI9341/cfg_delay_counter[16]_i_1/O
-                         net (fo=1, routed)           0.000    10.778    ILI9341/cfg_delay_counter[16]_i_1_n_0
-    SLICE_X63Y23         FDRE                                         r  ILI9341/cfg_delay_counter_reg[16]/D
+    SLICE_X48Y22         FDRE (Prop_fdre_C_Q)         0.419     6.532 r  ILI9341/pixel_y_reg[2]/Q
+                         net (fo=14, routed)          0.798     7.330    ILI9341/pixel_y_reg_n_0_[2]
+    SLICE_X50Y19         LUT2 (Prop_lut2_I1_O)        0.299     7.629 r  ILI9341/vram_rd_addr1_carry_i_2/O
+                         net (fo=1, routed)           0.000     7.629    ILI9341/vram_rd_addr1_carry_i_2_n_0
+    SLICE_X50Y19         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.380     8.009 r  ILI9341/vram_rd_addr1_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.009    ILI9341/vram_rd_addr1_carry_n_0
+    SLICE_X50Y20         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     8.228 r  ILI9341/vram_rd_addr1_carry__0/O[0]
+                         net (fo=3, routed)           0.974     9.202    ILI9341/vram_rd_addr1_carry__0_n_7
+    SLICE_X49Y22         LUT3 (Prop_lut3_I1_O)        0.323     9.525 r  ILI9341/vram_rd_addr1__29_carry_i_1/O
+                         net (fo=2, routed)           0.517    10.042    ILI9341/vram_rd_addr1__29_carry_i_1_n_0
+    SLICE_X50Y22         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.604    10.646 r  ILI9341/vram_rd_addr1__29_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.646    ILI9341/vram_rd_addr1__29_carry_n_0
+    SLICE_X50Y23         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.969 r  ILI9341/vram_rd_addr1__29_carry__0/O[1]
+                         net (fo=1, routed)           0.441    11.410    ILI9341/vram_rd_addr1[11]
+    SLICE_X51Y21         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.707    12.117 r  ILI9341/ram_reg_0_0_i_4/CO[3]
+                         net (fo=1, routed)           0.000    12.117    ILI9341/ram_reg_0_0_i_4_n_0
+    SLICE_X51Y22         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329    12.446 f  ILI9341/ram_reg_0_0_i_3/O[3]
+                         net (fo=6, routed)           0.823    13.269    VRAM/vram_rd_addr[11]
+    SLICE_X51Y27         LUT2 (Prop_lut2_I1_O)        0.306    13.575 r  VRAM/ram_reg_1_0__0_i_2/O
+                         net (fo=2, routed)           0.858    14.433    VRAM/ram_reg_1_0__0_i_2_n_0
+    RAMB36_X2Y6          RAMB36E1                                     r  VRAM/ram_reg_1_5__0/ENBWREN
   -------------------------------------------------------------------    -------------------
 
                          (clock pmod_OBUF[0] rise edge)
@@ -306,16 +323,17 @@ Slack (MET) :             11.637ns  (required time - arrival time)
                                                       0.083    18.926 r  MMCME2_BASE_inst/CLKOUT0
                          net (fo=1, routed)           1.587    20.513    pmod_OBUF[0]
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    20.604 r  pmod_OBUF_BUFG[0]_inst/O
-                         net (fo=216, routed)         1.504    22.108    ILI9341/clk
-    SLICE_X63Y23         FDRE                                         r  ILI9341/cfg_delay_counter_reg[16]/C
-                         clock pessimism              0.311    22.419    
-                         clock uncertainty           -0.036    22.384    
-    SLICE_X63Y23         FDRE (Setup_fdre_C_D)        0.031    22.415    ILI9341/cfg_delay_counter_reg[16]
+                         net (fo=317, routed)         1.486    22.090    VRAM/pmod_OBUF_BUFG[0]
+    RAMB36_X2Y6          RAMB36E1                                     r  VRAM/ram_reg_1_5__0/CLKBWRCLK
+                         clock pessimism              0.311    22.401    
+                         clock uncertainty           -0.036    22.365    
+    RAMB36_X2Y6          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ENBWREN)
+                                                     -0.443    21.922    VRAM/ram_reg_1_5__0
   -------------------------------------------------------------------
-                         required time                         22.415    
-                         arrival time                         -10.778    
+                         required time                         21.922    
+                         arrival time                         -14.433    
   -------------------------------------------------------------------
-                         slack                                 11.637    
+                         slack                                  7.489    
 
 
 
@@ -323,20 +341,20 @@ Slack (MET) :             11.637ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.143ns  (arrival time - required time)
-  Source:                 FT6206/I2C0/clk_divider_counter_reg[3]/C
+Slack (MET) :             0.119ns  (arrival time - required time)
+  Source:                 vram_wr_addr_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by pmod_OBUF[0]  {rise@0.000ns fall@8.138ns period=16.275ns})
-  Destination:            FT6206/I2C0/clk_divider_counter_reg[4]/D
-                            (rising edge-triggered cell FDSE clocked by pmod_OBUF[0]  {rise@0.000ns fall@8.138ns period=16.275ns})
+  Destination:            VRAM/ram_reg_1_5/ADDRARDADDR[2]
+                            (rising edge-triggered cell RAMB36E1 clocked by pmod_OBUF[0]  {rise@0.000ns fall@8.138ns period=16.275ns})
   Path Group:             pmod_OBUF[0]
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (pmod_OBUF[0] rise@0.000ns - pmod_OBUF[0] rise@0.000ns)
-  Data Path Delay:        0.287ns  (logic 0.189ns (65.806%)  route 0.098ns (34.194%))
-  Logic Levels:           1  (LUT5=1)
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    2.388ns
-    Source Clock Delay      (SCD):    1.840ns
-    Clock Pessimism Removal (CPR):    0.535ns
+  Data Path Delay:        0.307ns  (logic 0.128ns (41.649%)  route 0.179ns (58.351%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.059ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.394ns
+    Source Clock Delay      (SCD):    1.802ns
+    Clock Pessimism Removal (CPR):    0.532ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -350,14 +368,12 @@ Slack (MET) :             0.143ns  (arrival time - required time)
                                                       0.050     0.734 r  MMCME2_BASE_inst/CLKOUT0
                          net (fo=1, routed)           0.489     1.223    pmod_OBUF[0]
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.249 r  pmod_OBUF_BUFG[0]_inst/O
-                         net (fo=216, routed)         0.591     1.840    FT6206/I2C0/pmod_OBUF_BUFG[0]
-    SLICE_X65Y36         FDRE                                         r  FT6206/I2C0/clk_divider_counter_reg[3]/C
+                         net (fo=317, routed)         0.553     1.802    pmod_OBUF_BUFG[0]
+    SLICE_X49Y25         FDRE                                         r  vram_wr_addr_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X65Y36         FDRE (Prop_fdre_C_Q)         0.141     1.981 r  FT6206/I2C0/clk_divider_counter_reg[3]/Q
-                         net (fo=3, routed)           0.098     2.079    FT6206/I2C0/clk_divider_counter[3]
-    SLICE_X64Y36         LUT5 (Prop_lut5_I0_O)        0.048     2.127 r  FT6206/I2C0/clk_divider_counter[4]_i_1/O
-                         net (fo=1, routed)           0.000     2.127    FT6206/I2C0/clk_divider_counter__0[4]
-    SLICE_X64Y36         FDSE                                         r  FT6206/I2C0/clk_divider_counter_reg[4]/D
+    SLICE_X49Y25         FDRE (Prop_fdre_C_Q)         0.128     1.930 r  vram_wr_addr_reg[2]/Q
+                         net (fo=6, routed)           0.179     2.109    VRAM/Q[2]
+    RAMB36_X1Y5          RAMB36E1                                     r  VRAM/ram_reg_1_5/ADDRARDADDR[2]
   -------------------------------------------------------------------    -------------------
 
                          (clock pmod_OBUF[0] rise edge)
@@ -370,15 +386,16 @@ Slack (MET) :             0.143ns  (arrival time - required time)
                                                       0.053     0.965 r  MMCME2_BASE_inst/CLKOUT0
                          net (fo=1, routed)           0.534     1.498    pmod_OBUF[0]
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.527 r  pmod_OBUF_BUFG[0]_inst/O
-                         net (fo=216, routed)         0.861     2.388    FT6206/I2C0/pmod_OBUF_BUFG[0]
-    SLICE_X64Y36         FDSE                                         r  FT6206/I2C0/clk_divider_counter_reg[4]/C
-                         clock pessimism             -0.535     1.853    
-    SLICE_X64Y36         FDSE (Hold_fdse_C_D)         0.131     1.984    FT6206/I2C0/clk_divider_counter_reg[4]
+                         net (fo=317, routed)         0.866     2.394    VRAM/pmod_OBUF_BUFG[0]
+    RAMB36_X1Y5          RAMB36E1                                     r  VRAM/ram_reg_1_5/CLKARDCLK
+                         clock pessimism             -0.532     1.861    
+    RAMB36_X1Y5          RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[2])
+                                                      0.129     1.990    VRAM/ram_reg_1_5
   -------------------------------------------------------------------
-                         required time                         -1.984    
-                         arrival time                           2.127    
+                         required time                         -1.990    
+                         arrival time                           2.109    
   -------------------------------------------------------------------
-                         slack                                  0.143    
+                         slack                                  0.119    
 
 
 
@@ -392,10 +409,10 @@ Period(ns):         16.275
 Sources:            { MMCME2_BASE_inst/CLKOUT0 }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
-Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         16.275      13.699     RAMB18_X2Y8      ILI9341/rom_addr_reg_rep/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         16.275      12.912     RAMB36_X2Y4      VRAM/ram_reg_0_0/CLKARDCLK
 Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       16.275      197.085    MMCME2_ADV_X0Y0  MMCME2_BASE_inst/CLKOUT0
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         8.138       7.638      SLICE_X59Y37     FT6206/active_register_reg[0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         8.138       7.638      SLICE_X59Y37     FT6206/active_register_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         8.138       7.638      SLICE_X50Y26     VRAM_MODE_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         8.138       7.638      SLICE_X50Y26     VRAM_MODE_reg[0]/C
 
 
 
