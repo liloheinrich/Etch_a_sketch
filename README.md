@@ -1,6 +1,6 @@
 # Lab 2: Etch a Sketch
 
-<img src="docs/etchasketch.png" width="600"> 
+<img src="docs/etchasketch.png" width="400"> 
 
 In this lab we're going to build logic to make an "etch a sketch" or sketchpad hardware device. Over the course of the lab you will learn how to:
 * Design your own specifications for complex sequential and combinational logic blocks.
